@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>w3school 在线教程</title>
+		<style type="text/css">
+			html{
+				min-width: 1210px;
+			    background-color: #fdfcf8;
+			    overflow: scroll;
+			    overflow-x: hidden;
+				overflow-x: hidden;
+			}
+			body{
+				background: #fdfcf8;
+			}
+			*{
+				padding: 0;
+				margin: 0;
+				border: 0;
+			}
+			div#out{
+				margin: 0 auto;
+				width: 1239px;
+			}
+			#header{
+				width: 1210px;
+				height: 100px;
+				margin: 0 0 0 12px;
+				padding: 0;
+				border: 0;
+				background-color: #fdfcf8;
+			}
+			#header>a{
+				display: block;
+				width: 500px;
+				height: 100px;
+				background: transparent url(img/bg.png) 0 -150px no-repeat;
+				float: left;
+			}
+			#header>a:hover{
+				background: transparent url(img/bg.png) 0 -250px no-repeat;
+			}
+			#search{
+				display: block;
+				width: 306px;
+				height: 100px;
+				float: right;
+			}
+			
+			#search form{
+				margin-top: 35px;
+				padding: 0;
+				width: 300px;
+				height: 60px;
+			}
+			#sbox{
+				margin: 0;
+				padding: 0;
+				width: 256px;
+				height: 28px;
+				background: #fdfdfd;
+				font: 12px Verdana, Arial, Helvetica, sans-serif;
+				border: 1px solid #ddd;
+			}
+			#sub{
+				padding: 0;
+				margin: 0;
+				background: #AE4141;
+				text-align: center;
+				font: 12px Verdana, Arial, Helvetica, sans-serif;
+				color: #FFFFFF;
+				width: 30px;
+				height: 30px;
+				border: 0;
+			}
+			#navfirst{
+				margin: 0 0 0 12px;
+				width: 1210px;
+				height: 48px;
+				margin: 0 0 0 12px;
+				background-color: #E8E7E3;
+			}
+			#navfirst ul{
+				height: 48px;
+			    width: 1210px;
+			    margin: 0;
+			    padding: 0;
+			    background: transparent url(img/bg.png) top left no-repeat;
+			    
+			}
+			#navfirst li{
+				display: block;
+				height: 48px;
+				position: absolute;
+   			 	top: 0
+			    list-style: none;
+			}
+			#navfirst ul li a{
+				display: block;
+				overflow: hidden;
+				height: 48px;
+				float: left;
+			}
+			#m1{	left: 0;		width: 155px; }
+			#m2{	left: 155px;	width: 157px;}
+			#m3{	left: 312px;	width: 167px;}
+			#m4{	left: 479px;	width: 158px;}
+			#m5{	left: 637px;	width: 101px;}
+			#m6{	left: 738px;	width: 185px;}
+			#m7{	left: 923px;	width: 177px;}
+			
+			#m1:hover	{background: transparent url(img/bg.png) 0 -48px no-repeat;}
+			#m2:hover	{background: transparent url(img/bg.png) -155px -48px no-repeat;}
+			#m3:hover	{background: transparent url(img/bg.png) -312px -48px no-repeat;}
+			#m4:hover	{background: transparent url(img/bg.png) -479px -48px no-repeat;}
+			#m5:hover	{background: transparent url(img/bg.png) -637px -48px no-repeat;}
+			#m6:hover	{background: transparent url(img/bg.png) -738px -48px no-repeat;}
+			#m7:hover	{background: transparent url(img/bg.png) -923px -48px no-repeat;}
+			
+			#navsecond{
+				margin-left: 12px;
+				padding-top: 10px;
+				width: 178px;
+				height: 1683px;
+				border-left: 1px solid #DDDDDD;
+				border-right: 1px solid #DDDDDD;
+				font-family: "微软雅黑";
+				float: left;
+			}
+			#sidebar{
+				padding-top: 10px;
+				width: 178px;
+				height: 1683px;
+				border-left: 1px solid #DDDDDD;
+				border-right: 1px solid #DDDDDD;
+				font-family: "微软雅黑";
+				float: left;
+			}
+			#navsecond h2,#sidebar h2{
+				
+				font-size: 14px;
+				display: block;
+				padding: 10px 0px 5px 9px;
+			}
+			#navsecond ul,#sidebar ul{
+				list-style: none;
+			}
+			#navsecond a,#sidebar a{
+				display: block;
+				color: #000000;
+				font-size: 12px;
+				text-decoration: none;
+				padding: 5px 0px 5px 14px;
+			}
+			#sidebar a{
+				color: #900B09;
+			}
+			#navsecond a:hover{
+				color: #FDFCF8;
+				background-color: #AAAAAA;
+			}
+			#sidebar a:hover{
+				color: #FDFCF8;
+				background-color: #BD2D30
+			}
+			#navsecond a:active{
+				background-color: #BD2D30;
+			}
+			#navsecond #a_1,#navsecond #a_2{
+				display: block;
+				margin-left: 9px;
+			    padding: 0;
+			    font-weight: 700;
+			    font-size: 14px;
+			    border-bottom: 0px solid #ddd;
+			    text-decoration: none;
+			    color: #0479A7
+			}
+			#navsecond #a_1{
+				margin-top: 20px;
+   			 	margin-bottom: 15px;
+			}
+			#navsecond #a_2{
+				margin-bottom: 20px;
+			}
+			#main{
+				width: 850px;
+				height: 1639px;
+				padding-top: 30px;
+				/*border-left: 1px solid gainsboro;
+				border-right: 1px solid gainsboro;*/
+				float: left;
+			}
+			.idea{
+				margin:0 15px 0 25px;
+			    padding-bottom: 30px;
+			    border-bottom: 1px solid #aaa;
+			    min-height: 118px;
+			}
+			.idea>h2{
+				margin-top: 35px;
+				color: #3f3f3f;
+			}
+			.idea h3{
+				margin-top: 35px;
+			    margin-left: 110px;
+			    font-size: 24px;
+			}
+			.idea h4{
+			    font-size: 14px;
+			    margin: 23px 0 0 58px;
+			    color: #777;
+			    font-weight: 400;
+			}
+			.idea>p{
+				margin: 12px 0 0 110px;
+				font-size: 16px;
+    			line-height: 150%;
+			}
+			.idea strong{
+				font-family: '微软雅黑';
+			    font-size: 18px;
+			    color: #3f3f3f;
+			    font-weight: 800;
+			}
+			.idea>p a:link,.idea>p a:visited{
+				text-decoration: none;
+			    color: #900b09;
+			    background: transparent;
+			    border-bottom: 1px solid #900b09;
+			}
+			.idea>p a:hover {
+				text-decoration : none;
+				color: #ff0000;
+				background : transparent; 
+				border-bottom:1px solid #ff0000;
+			}
+			#d1{
+				text-align: center;
+				padding-bottom: 30px;
+				min-height: 118px;
+			}
+			#d1 p{
+				margin-left: 0;
+    			font-size: 18px;
+			}
+			#d2{
+				background: transparent url(img/icon2.png) 0 0 no-repeat;
+			}
+			#d3{
+				background: transparent url(img/icon3.png) 0 0 no-repeat;
+			}
+			#d4{
+				background: transparent url(img/icon4.png) 0 0 no-repeat;
+			}
+			#d5{
+				background: transparent url(img/icon5.png) 0 0 no-repeat;
+			}
+			#d6{
+				background: transparent url(img/icon6.png) 0 0 no-repeat;
+			}
+			#d7{
+				background: transparent url(img/icon7.png) 0 0 no-repeat;
+			}
+			#d8{
+				background: transparent url(img/icon8.png) 0 0 no-repeat;
+				height: 67px;
+				border: 0px;
+				min-height: 67px;
+			}
+			#d8 a,#d9 a,#d10 a{
+				color: #000000;
+			}
+			#d9,#d10{
+				margin:15px 0 0 75px;
+			    float: left;
+			    border: 0;
+			    min-height: 87px;
+			}
+			#d9{
+				width: 290px;
+				background: transparent url(img/icon9.png) 0 0 no-repeat;
+			}
+			#d9 p,#d10 p{
+				font-size: 14px;
+			    margin: 0 0 0 58px;
+			    line-height: normal;
+			}
+			#d10{
+				width: 299px;
+				background: transparent url(img/icon10.png) 0 0 no-repeat;
+			}
+			#footer{
+				clear: both;
+				width: 1210px;
+				height: 78px;
+				line-height:24px;
+				margin-left: 12px;
+				padding-top: 16px;
+				/*background-color: #E8E7E3;*/
+				background:url(img/footer.png) top left repeat-x;
+				font-family: PingFangSC-Regular, '微软雅黑', Verdana, Arial, '宋体';
+				float: left;	
+				
+			}
+			#p1{
+				max-height: 99999px;
+				font-size:12px;
+				color:#777777;
+				text-align:center;
+				background: transparent url(http://www.w3school.com.cn/ui2017/alert.png) no-repeat;
+				background-position:235px 2px;
+			}
+	
+			#p2{
+				max-height: 99999px;
+			  	margin: 30px 0 30px 0;
+			    font-size: 14px;
+			    text-align: center;
+			    color: #777777;
+			}
+			#p2 a{
+				text-decoration: none;
+    			color: #777777;
+    			background: transparent;
+			}
+			#p2 a:hover{
+				text-decoration: underline;
+				color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="out">
+			<div id="header">
+				<a href=""></a>
+				<div id="search">
+					<form action="" method="post">
+						<input type="text" id="sbox" value="" />
+						<input type="submit" id="sub" value="Go"/>
+					</form>
+				</div>
+			</div>
+			<div id="navfirst">
+				<ul>
+					<li>
+						<a href="" id="m1"></a>
+						<a href="" id="m2"></a>
+						<a href="" id="m3"></a>
+						<a href="" id="m4"></a>
+						<a href="" id="m5"></a>
+						<a href="" id="m6"></a>
+						<a href="" id="m7"></a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="navsecond">
+				<h2>HTML 教程</h2>
+				<ul>
+					<li><a href="">HTML</a></li>
+					<li><a href="">HTML5</a></li>
+					<li><a href="">XHTML</a></li>
+					<li><a href="">CSS</a></li>
+					<li><a href="">CSS3</a></li>
+					<li><a href="">TCP/IP</a></li>
+
+				</ul>
+				<h2>浏览器脚本</h2>
+				<ul>
+					<li>
+						<a href="">JavaScript</a>
+						<a href="">HTML DOM</a>
+						<a href="">jQuery</a>
+						<a href="">jQuery Mobile</a>
+						<a href="">AJAX</a>
+						<a href="">JSON</a>
+						<a href="">DHTML</a>
+						<a href="">E4X</a>
+						<a href="">WMLScript</a>
+					</li>
+				</ul>
+				<h2>服务器脚本</h2>
+				<ul>
+					<li><a href="">PHP</a></li>
+					<li><a href="">SQL</a></li>
+					<li><a href="">ASP</a></li>
+					<li><a href="">ADO</a></li>
+					<li><a href="">VBScript</a></li>
+				</ul>
+				<h2>XML教程</h2>
+				<ul>
+					<li>
+						<a href="">XML</a>
+						<a href="">DTD</a>
+						<a href="">XML DOM</a>
+						<a href="">XSL</a>
+						<a href="">XSLT</a>
+						<a href="">XSL-FO</a>
+						<a href="">XPath</a>
+						<a href="">XQuery</a>
+						<a href="">XLink</a>
+						<a href="">XPointer</a>
+						<a href="">Schema</a>
+						<a href="">XForms</a>
+						<a href="">WAP</a>
+						<a href="">SVG</a>
+					</li>
+				</ul>
+				<h2>Web Servies</h2>
+				<ul>
+					<li>
+						<a href="">Web Servies</a>
+						<a href="">WSDL</a>
+						<a href="">SOAP</a>
+						<a href="">RSS</a>
+						<a href="">RDF</a>
+					</li>
+				</ul>
+				<h2>.NET</h2>
+				<ul>
+					<li>
+						<a href="">ASP.NET</a>
+						<a href="">Web Pages</a>
+						<a href="">Razor</a>
+						<a href="">MVC</a>
+						<a href="">Web Forms</a>
+					</li>
+				</ul>
+				<h2>建站手册</h2>
+				<ul>
+					<li>
+						<a href="">网站构建</a>
+						<a href="">万维网联盟 (W3C)</a>
+						<a href="">浏览器信息</a>
+						<a href="">网站品质</a>
+						<a href="">语义网</a>
+						<a href="">职业规划</a>
+						<a href="">网站主机</a>
+						<a href="">网络媒体</a>
+					</li>
+				</ul>
+				<a href="" id="a_1">关于 W3School</a>
+				<a href="" id="a_2">帮助 W3School</a>
+			</div>
+			<div id="main">
+				<div class="idea" id="d1">
+					<h2>领先的 Web 技术教程 - 全部免费</h2>
+					<p>在 w3school，你可以找到你所需要的所有的网站建设教程。</p>
+					<p>从基础的 HTML 到 CSS，乃至进阶的 XML、SQL、JS、PHP 和 ASP.NET。</p>
+					<p><strong>从左侧的菜单选择你需要的教程！</strong></p>
+				</div>
+				<div class="idea" id="d2">
+					<h3>完整的网站技术参考手册</h3>
+					<p>我们的参考手册涵盖了网站技术的方方面面。</p>
+					<p>其中包括W3C标准技术：HTML、CSS、XML 。以及其他技术，诸如 JavaScript、PHP、SQL 等。</p>
+				</div>
+				<div class="idea" id="d3">
+					<h3>在线实例测试工具</h3>
+					<p>在 w3school，我们提供上千个实例。</p>
+					<p>通过使用我们的在线编辑器，你可以编辑这些例子，并对代码进行实验</p>
+				</div>
+				<div class="idea" id="d4">
+					<h3>快捷易懂的学习方式</h3>
+					<p>一寸光阴一寸金，因此，我们为您提供快捷易懂的学习内容。</p>
+					<p>在这里，您可以通过一种易懂的便利的模式获得您需要的任何知识。</p>
+				</div>
+				<div class="idea" id="d5">
+					<h3>从何入手？</h3>
+					<p>什么是一个Web建设者需要学习的知识呢？</p>
+					<p>W3School将为您回答这个问题，在您成为专业 Web 开发者的路上助一臂之力</p>
+					<p>
+						如果您是开发者，请您阅读《<a href="" title="网站构建初级教程">网站构建初级教程</a>》。
+					</p>
+					<p>
+						如果您是开发者，请您阅读《<a href="" title="网站构建">网站构建高级教程</a>》。
+					</p>
+				</div>
+				<div class="idea" id="d6">
+					<h3>W3School 新闻</h3>
+					<p>
+						<a href="/cssref/index.asp" title="CSS 参考手册">CSS3 参考手册</a>
+						已上线，敬请批评指正。
+					</p>
+					
+				</div>
+				<div class="idea" id="d7">
+					<h3>W3School 更新信息</h3>
+					<p><a href="">参考手册：PHP Calendar 函数</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="">参考手册：PHP Date / Time 函数</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="">教程：HTML 教程</a>
+					</p>
+				</div>
+				<div class="idea" id="d8">
+					<h3>W3School 友情链接</h3>
+					<p>
+						<a href="">Firefox 中文社区</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="">w3ctech</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="">WeTest腾讯质量开放平台</a>
+					</p>
+				</div>
+				<div class="idea" id="d9">
+					<h4>新浪微博</h4>
+					<p><a href="">W3School 官方微博</a></p>
+				</div>
+				<div class="idea" id="d10">
+					<h4>微信公众号</h4>
+					<p>W3School 官方服务号</p>
+				</div>
+			</div>
+			<div id="sidebar">
+				<h2>参考手册</h2>
+				<ul>
+					<li>
+						<a href="">HTML/HTML5 标签</a>
+						<a href="">HTML 颜色</a>
+						<a href="">CSS 1,2,3</a>
+						<a href="">JavaScript</a>
+						<a href="">HTML DOM</a>
+						<a href="">jQuery</a>
+						<a href="">jQuery Mobile</a>
+						<a href="">VBScript</a>
+						<a href="">ASP</a>
+						<a href="">ADO</a>
+						<a href="">ASP.NET</a>
+						<a href="">PHP 5.1</a>
+						<a href="">XML DOM</a>
+						<a href="">XSLT 1.0</a>
+						<a href="">XPath 2.0</a>
+						<a href="">XSL-FO</a>
+						<a href="">WML 1.1</a>
+						<a href="">W3C 术语表</a>
+					</li>
+				</ul>
+
+				<h2>字符集</h2>
+				<ul>
+					<li>
+						<a href="">HTML 字符集</a>
+						<a href="">HTML ASCII</a>
+						<a href="">HTML ISO-889-1</a>
+						<a href="">HTML 符号</a>
+					</li>
+				</ul>
+				<h2>案例/实例</h2>
+				<ul>
+					<li>
+						<a href="">HTML 实例</a>
+						<a href="">CSS 实例</a>
+						<a href="">XML 实例</a>
+						<a href="">JavaScript 实例</a>
+						<a href="">JavaScript 对象实例</a>
+						<a href="">HTML DOM实例</a>
+						<a href="">jQuery 实例</a>
+						<a href="">jQuery Mobile实例</a>
+						<a href="">XML DOM实例</a>
+						<a href="">DHTML</a>
+						<a href="">AJAX</a>
+						<a href="">VBScript</a>
+						<a href="">ASP</a>
+						<a href="">ADO</a>
+						<a href="">SVG</a>
+						<a href="">WAP</a>
+					</li>
+				</ul>
+				<h2>测验/考试</h2>
+				<ul>
+					<li>
+						<a href="">HTML 测验</a>
+						<a href="">HTML5 测验</a>
+						<a href="">XHTML 测验</a>
+						<a href="">CSS 测验</a>
+						<a href="">XML 测验</a>
+						<a href="">JavaScript 测验</a>
+						<a href="">jQuery 测验</a>
+						<a href="">SQL 测验</a>
+						<a href="">ASP 测验</a>
+						<a href="">PHP 测验</a>
+					</li>
+					
+				</ul>
+				<h2>代码验证</h2>
+				<ul>
+					<li>
+						<a href="">验证HTML</a>
+						<a href="">验证CSS</a>
+						<a href="">验证XHTML</a>
+						<a href="">验证XML</a>
+						<a href="">验证 WML</a>
+					</li>
+				</ul>
+				
+				
+			</div>
+			<div id="footer">
+				
+				 <p id="p1">
+				 	W3School 简体中文版提供的内容仅用于培训和测试，不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。
+				 </p>
+				 <p id="p2">
+				 	<a href="">使用条款</a>和<a href="">隐私条款</a>。版权所有，保留一切权利。
+				 	赞助商：<a href="">上海赢科投资有限公司</a>。
+				 	<a href="">蒙ICP备06004630号</a>
+				 </p>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
